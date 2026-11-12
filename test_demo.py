@@ -3,7 +3,7 @@ import pydobot
 import time
 
 # ---------------Connecting---------------
-port = '/dev/ttyUSB2'
+port = '/dev/ttyUSB0'
 print("Connecting to Dobot...")
 try:
     device = pydobot.Dobot(port=port, verbose=False)
@@ -17,7 +17,7 @@ except Exception as e:
 home_x, home_y, home_z, home_r = 200.0, 0.0, 50.0, 0.0
 fast_speed, fast_acc = 70, 70
 norm_speed, norm_acc = 50, 50
-slow_speed, slow_acc = 15, 40
+slow_speed, slow_acc = 5, 40
 
 
 

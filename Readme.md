@@ -49,11 +49,18 @@ pip install pydobot pyserial
 
 ## Usage
 
-*(Add instructions here on how to run your main exfoliation scripts, e.g.,)*
-
-Ensure your virtual environment is active, then run the test script to verify the connection:
+Ensure your virtual environment is active (`source .venv/bin/activate`), then launch the web control interface:
 ```bash
-python test_connection.py
+python exfoliation_ui.py
+```
+This opens the local dashboard at `http://127.0.0.1:8080`, where you can:
+- Connect to `/dev/ttyUSB0` (or enable **Simulation Mode** to preview the sequence without hardware).
+- Set the **Dipping Speed**, **Arm Angle During Dipping ($\Delta R$)**, **Liquid Surface Height ($Z_{\text{surface}}$)**, and **Immersion Depth ($\Delta Z_{\text{dip}}$)**.
+- Configure the **Sample Pickup Position** next to the dipping station and capture coordinates directly from the robot's current pose.
+
+To run the standalone command-line demo script directly:
+```bash
+python test_demo.py
 ```
 
 ## Process Overview: hBN Wet Exfoliation
@@ -62,3 +69,4 @@ python test_connection.py
 
 ## Roadmap
 - [x] Initial hardware communication and environment setup
+- [x] Web UI for wet exfoliation parameter control and sample pickup/return routine
